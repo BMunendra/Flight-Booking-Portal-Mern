@@ -1,0 +1,106 @@
+/* Page container with animated gradient background */
+.user-bookingsPage {
+    margin: 13vh 0 0 0;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #1f2937, #3b82f6, #9333ea);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+/* Gradient animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.user-bookingsPage h1 {
+    color: #ffffff;
+    margin-left: 3vw;
+    font-weight: 600;
+}
+
+/* Bookings grid layout */
+.user-bookings {
+    margin-top: 5vh;
+    width: 90%;
+    margin-left: 5%;
+    padding-bottom: 5vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 30px;
+}
+
+/* Individual booking card with glassmorphism */
+.user-bookings .user-booking {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    width: 90%;
+    margin-left: 5%;
+    padding: 3vh 2vw;
+    border-radius: 0.7rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect with glow */
+.user-bookings .user-booking:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Booking details layout */
+.user-bookings .user-booking span {
+    display: flex;
+    gap: 25px;
+}
+
+.user-bookings .user-booking p {
+    margin: 0;
+    margin-bottom: 3px;
+    color: #e5e7eb;
+}
+
+.user-bookings .user-booking p b {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.user-bookings .user-booking ol {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #e5e7eb;
+}
+
+.user-bookings .user-booking ol b {
+    font-weight: 500;
+    color: #ffffff;
+}
+
+/* Booking action button */
+.user-bookings .user-booking button {
+    margin-top: 15px;
+    background: rgba(0, 108, 197, 0.9);
+    border: none;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    font-weight: bold;
+    height: 40px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.user-bookings .user-booking button:hover {
+    background: rgba(0, 108, 197, 1);
+}

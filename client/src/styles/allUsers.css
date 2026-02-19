@@ -1,0 +1,81 @@
+/* Page container with animated gradient background */
+.all-users-page {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 13vh;
+    padding-left: 3vw;
+    background: linear-gradient(135deg, #1f2937, #3b82f6, #9333ea);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+/* Gradient animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.all-users-page h2 {
+    margin-bottom: 4vh;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Users list container */
+.all-users {
+    width: 80%;
+    height: 30vh;
+    margin-bottom: 4vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Hide scrollbar */
+.all-users::-webkit-scrollbar {
+    display: none;
+}
+
+/* Individual user card with glassmorphism */
+.all-users .user {
+    width: 70%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 0.8rem;
+    display: flex;
+    padding: 2vh 2vw;
+    gap: 2vw;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect with glow */
+.all-users .user:hover {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+    transform: translateY(-4px);
+}
+
+/* User text styling */
+.all-users .user p {
+    margin: 0;
+    color: #e5e7eb;
+}
+
+.all-users .user p b {
+    font-weight: 600;
+    color: #ffffff;
+}

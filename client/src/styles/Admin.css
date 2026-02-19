@@ -1,0 +1,144 @@
+/* Page container with animated gradient background */
+.admin-page {
+    margin-top: 15vh;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1f2937, #3b82f6, #9333ea);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+/* Gradient animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Card grid layout */
+.admin-page-cards {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Glassmorphism card style */
+.admin-card {
+    padding: 3vh 2vw;
+    text-align: center;
+    width: 20vw;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    /* Glass effect */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    /* Shadow for depth */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect with glow */
+.admin-card:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transform: translateY(-5px);
+}
+
+.admin-card h4 {
+    margin: 0;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.admin-card p {
+    margin: 0;
+    color: #e5e7eb;
+}
+
+/* Requests container with glass look */
+.admin-requests-container {
+    margin: 10vh 0 3vh 3vw;
+    width: 70%;
+    padding: 2vh 2vw;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.admin-requests-container h3 {
+    color: #ffffff;
+}
+
+/* Requests list */
+.admin-requests {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 4vh;
+    height: 30vh;
+    overflow-y: scroll;
+    margin-left: 2vw;
+}
+
+/* Individual request card */
+.admin-request {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px 25px;
+    margin-right: 10px;
+    border-radius: 0.8rem;
+    color: #f3f4f6;
+}
+
+.admin-request span {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-request span b {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* Request actions */
+.admin-request-actions {
+    display: flex;
+    gap: 30px;
+}
+
+.admin-request-actions button {
+    width: 7rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    padding: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.admin-request-actions button:hover {
+    background: rgba(255, 255, 255, 0.35);
+}

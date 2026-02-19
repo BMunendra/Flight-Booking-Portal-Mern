@@ -1,0 +1,123 @@
+/* Page container with animated gradient background */
+.BookFlightPage {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 15vh;
+    padding-bottom: 5vh;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, #1f2937, #3b82f6, #9333ea);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+/* Gradient animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Booking container with glassmorphism */
+.BookingFlightPageContainer {
+    width: 44%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 2vh 2%;
+    border-radius: 0.7rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+/* Title */
+.BookingFlightPageContainer h2 {
+    margin: 0;
+    margin-bottom: 5vh;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Paragraphs */
+.BookingFlightPageContainer p {
+    margin: 0;
+    margin-bottom: 5px;
+    color: #e5e7eb;
+}
+
+.BookingFlightPageContainer p b {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Two-column layout */
+.BookingFlightPageContainer span {
+    display: grid;
+    grid-template-columns: 64% 33%;
+    gap: 3%;
+}
+
+/* Three-column layout */
+.BookingFlightPageContainer .span3 {
+    display: grid;
+    grid-template-columns: 31.3% 31.3% 31.3%;
+    gap: 3%;
+}
+
+/* Button */
+.BookingFlightPageContainer button {
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 25px;
+    background: rgba(0, 108, 197, 0.9);
+    border: none;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    font-weight: bold;
+    height: 45px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.BookingFlightPageContainer button:hover {
+    background: rgba(0, 108, 197, 1);
+}
+
+/* List items */
+.BookingFlightPageContainer li {
+    font-size: 0.8rem;
+    color: #e5e7eb;
+}
+
+/* New passenger section */
+.new-passenger h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Passenger inputs grid */
+.new-passenger-inputs {
+    display: grid;
+    grid-template-columns: 67% 30%;
+    gap: 3%;
+}
+
+.new-passenger-inputs select {
+    padding-left: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.5rem;
+    color: #ffffff;
+    outline: none;
+}

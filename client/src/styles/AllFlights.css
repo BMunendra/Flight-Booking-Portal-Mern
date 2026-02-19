@@ -1,0 +1,105 @@
+/* Page container with animated gradient background */
+.allFlightsPage {
+    margin: 13vh 0 0 0;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #1f2937, #3b82f6, #9333ea);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+/* Gradient animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.allFlightsPage h1 {
+    color: #ffffff;
+    margin-left: 3vw;
+    font-weight: 600;
+}
+
+/* Flights grid layout */
+.allFlights {
+    margin-top: 5vh;
+    width: 90%;
+    margin-left: 5%;
+    padding-bottom: 5vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 30px;
+}
+
+/* Individual flight card with glassmorphism */
+.allFlights .allFlights-Flight {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    width: 90%;
+    margin-left: 5%;
+    padding: 3vh 2vw;
+    border-radius: 0.7rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect with glow */
+.allFlights .allFlights-Flight:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Flight details layout */
+.allFlights .allFlights-Flight span {
+    display: flex;
+    gap: 25px;
+}
+
+.allFlights .allFlights-Flight p {
+    margin: 0;
+    margin-bottom: 3px;
+    color: #f3f4f6;
+}
+
+.allFlights .allFlights-Flight p b {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.allFlights .allFlights-Flight ol {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #e5e7eb;
+}
+
+.allFlights .allFlights-Flight ol b {
+    font-weight: 500;
+    color: #ffffff;
+}
+
+/* Flight action button */
+.allFlights .allFlights-Flight button {
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.allFlights .allFlights-Flight button:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
